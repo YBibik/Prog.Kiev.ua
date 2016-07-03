@@ -10,7 +10,7 @@ public class BlinovA8 {
     public static void main(String[] args) throws Exception
     {
         int result = GetPalindrom(CreateArr());
-        //Вывод на экран не указан в задании, если нужно, то раскомментарить строку ниже
+        //Вывод на экран не указан в задании, если нужно, то раскомментарить строку ниже.
         System.out.println(result);
     }
 
