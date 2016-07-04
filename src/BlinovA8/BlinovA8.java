@@ -11,7 +11,7 @@ public class BlinovA8 {
     {
         int result = GetPalindrom(CreateArr());
         //Вывод на экран не указан в задании, если нужно, то раскомментарить строку ниже.
-        System.out.println(result);
+        //System.out.println(result);
     }
 
     public static int[] CreateArr() throws Exception
