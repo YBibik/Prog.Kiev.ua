@@ -46,4 +46,14 @@ public class LineAction {
         }
         return Collections.max(linelength);
     }
+
+    public static double getLineSumLength(List<Line> list)
+    {
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++)
+        {
+            sum += getLineLength(list, i);
+        }
+        return sum;
+    }
 }
