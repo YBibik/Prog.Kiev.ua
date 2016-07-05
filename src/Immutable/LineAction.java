@@ -8,25 +8,17 @@ import java.util.*;
  */
 public class LineAction {
 
-    public static void main(String[] args)
+    public static List<Line> createLineList()
     {
-
-
-        System.out.println(GetLineLength(CreateLineList()));
-
-    }
-
-    public static ArrayList<Line> CreateLineList()
-    {
-        ArrayList<Line> vlinelist = new ArrayList<Line>();
-        vlinelist.add(new Line(new Point(1, 10), new Point(2, 15)));
-        vlinelist.add(new Line(new Point(7, 15), new Point(3, 11)));
+        List<Line> vlinelist = new ArrayList<Line>();
+        vlinelist.add(new Line(new Point(1, 23), new Point(2, 5)));
+        vlinelist.add(new Line(new Point(-7, -15), new Point(3, 11)));
         vlinelist.add(new Line(new Point(-1, 10), new Point(2, 15)));
 
         return vlinelist;
     }
 
-    public static double GetLineLength(ArrayList<Line> list)
+    public static double getLineLength(List<Line> list, int pos)
     {
         int x1 = 0;
         int x2 = 0;
@@ -34,29 +26,24 @@ public class LineAction {
         int y2 = 0;
         double length = 0;
 
-        for (int i = 0; i < list.size(); i++)
-        {
-            x1 = list.get(i).getStart().getX();
-            y1 = list.get(i).getStart().getY();
-            x2 = list.get(i).getEnd().getX();
-            y2 = list.get(i).getEnd().getY();
+            x1 = list.get(pos).getStart().getX();
+            y1 = list.get(pos).getStart().getY();
+            x2 = list.get(pos).getEnd().getX();
+            y2 = list.get(pos).getEnd().getY();
 
             length = Math.hypot((x2 - x1), (y2 - y1));
-
-            System.out.println(x1 +"  "+ y1 +"  "+ x2 +"  "+ y2);
-        }
 
         return length;
     }
 
-    public static double GetLongestLine(ArrayList<Line> list)
+    public static double getLongestLine(List<Line> list)
     {
-        ArrayList<Double> linelength = new ArrayList<Double>();
+        List<Double> linelength = new ArrayList<Double>();
+
         for (int i = 0; i < list.size(); i++)
         {
-            linelength.add(GetLineLength(list));
+            linelength.add(getLineLength(list, i));
         }
-
-        return Collections.
+        return Collections.max(linelength);
     }
 }

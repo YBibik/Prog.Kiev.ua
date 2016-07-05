@@ -5,8 +5,8 @@ package Immutable;
  */
 public class Line {
 
-    private Point start;
-    private Point end;
+    private final Point start;
+    private final Point end;
 
     //Constructor
     public Line(Point start, Point end)
@@ -15,18 +15,10 @@ public class Line {
         this.end = end;
     }
 
-    // getters && setters
-
-    public void setStart(Point start) {
-        this.start = start;
-    }
+    // getters
 
     public Point getStart() {
         return this.start;
-    }
-
-    public void setEnd(Point end) {
-        this.end = end;
     }
 
     public Point getEnd() {

@@ -5,8 +5,8 @@ package Immutable;
  */
 public class Point {
 
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     //constructor
     public Point(int x, int y)
@@ -14,18 +14,10 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    //getters && setters
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
+    //getters
     public int getX() {
         return this.x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public int getY() {
