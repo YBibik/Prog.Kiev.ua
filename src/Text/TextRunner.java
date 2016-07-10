@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.List;
 
 /**
- * Created by Администратор on 10.07.2016.
+ * Created by y.bibik on 10.07.2016.
  */
 public class TextRunner {
 
