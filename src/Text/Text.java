@@ -18,4 +18,9 @@ public class Text {
         }
         System.out.println(text);
     }
+
+    public static void printHeader(String s) {
+
+        System.out.println(s);
+    }
 }
