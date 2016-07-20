@@ -44,11 +44,11 @@ public class FilmRunner {
         }
 
         // Найти все фильмы, у которых жанры HORROR, THRILLER.
-        filmsbygenre = FilmUtil.getFilmsByGenre(films, Film.Genre.HORROR.getValue());
-        filmsbygenre.addAll(FilmUtil.getFilmsByGenre(films, Film.Genre.THRILLER.getValue()));
+        filmsbygenre = FilmUtil.getFilmsByGenre(films, Film.Genre.HORROR);
+        filmsbygenre.addAll(FilmUtil.getFilmsByGenre(films, Film.Genre.THRILLER));
 
         // Найти все фильмы комедии, которые выпущеные в 1990-2000 rr.
-        filmsbygenreandyear = FilmUtil.getFilmsByGenre(films, Film.Genre.COMEDY.getValue());
+        filmsbygenreandyear = FilmUtil.getFilmsByGenre(films, Film.Genre.COMEDY);
         filmsbygenreandyear = FilmUtil.getFilmsByYear(filmsbygenreandyear, 1990, 2000);
 
         // Output all Films
