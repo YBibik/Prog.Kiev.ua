@@ -11,7 +11,7 @@ public class FilmUtil {
     // Поиск по жанру
     static List<Film> getFilmsByGenre(List<Film> films, Film.Genre genre) {
 
-        List<Film> tmpfilms = films.stream().filter(film -> film.getGenre().equals(genre.getValue())).collect(Collectors.toList());
+        List<Film> tmpfilms = films.stream().filter(film -> film.getGenre() == genre.getValue()).collect(Collectors.toList());
         return tmpfilms;
     }
     // Поиск по году
