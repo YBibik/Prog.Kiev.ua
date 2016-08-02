@@ -8,32 +8,24 @@ import pair.Pair;
 public class Range<T extends Number> {
 
     private T range;
-    private Pair<Integer, Long> pair = new Pair<>();
+   // private Pair<Integer, Long> pair = new Pair<>(right, right);
 
     public Range(T range) {
-        RangeChecker(pair);
         this.range = range;
     }
 
     public Range() {
-        RangeChecker(pair);
     }
 
     public T getRange() {
         return range;
     }
 
-    private static void RangeChecker(Pair pair) {
-        if ((Integer)pair.getLeft() < (Long)pair.getRight()) {
-            throw new IllegalArgumentException("Не корректное значение диапазона");
-        }
-    }
-
     @Override
     public String toString() {
         return "Range{" +
                 "range=" + range +
-                ", pair=" + pair +
+                ", pair=" + //pair +
                 '}';
     }
 }

@@ -9,12 +9,18 @@ public class RangeRunner {
 
     public static void main(String[] args) {
 
-        System.out.println(createRange(new Pair<Integer, Long>(10, (long) 20)));
+        Pair<Integer, Long> pair = new Pair<>(10, (long) 20);
+        System.out.println(pair);
+
+        //System.out.println(createRange(pair));
+        Integer i = 10;
+        Integer y = 20;
+        System.out.println(i.compareTo(y));
 
     }
 
     static Range createRange(Pair pair) {
-        Range range = new Range<>((Long)pair.getRight() - (Integer)pair.getLeft());
+        Range range = new Range<Number>((Long)pair.getRight() - (Integer)pair.getLeft());
         return range;
     }
 }
