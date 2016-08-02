@@ -12,11 +12,13 @@ public class RangeRunner {
 
         Pair<Integer, Long> pair = new Pair<>(left, right);
         rangeChecker(pair);
-        Range<Integer> range = new Range<>(calcRange(pair));
+        Range<Integer> intrange = new Range<>(calcRange(pair));
+        Range<Long> longrange = new Range<>((long) calcRange(pair));
 
         System.out.println("left value: " + pair.getLeft());
         System.out.println("right value: " + pair.getRight());
-        System.out.println("Range value: " + range.getRange());
+        System.out.println("Range Integer value: " + intrange.getRange());
+        System.out.println("Range Long value: " + longrange.getRange());
     }
 
     private static void rangeChecker(Pair<Integer, Long> pair) {
