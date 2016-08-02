@@ -1,7 +1,5 @@
 package range;
 
-import pair.Pair;
-
 /**
  * Created by y.bibik on 01.08.2016.
  */
@@ -9,18 +7,24 @@ public class RangeRunner {
 
     public static void main(String[] args) {
 
-        Pair<Integer, Long> pair = new Pair<>(10, (long) 20);
-        System.out.println(pair);
+        int left = 10;
+        long right = 15;
 
-        //System.out.println(createRange(pair));
-        Integer i = 10;
-        Integer y = 20;
-        System.out.println(i.compareTo(y));
+        Pair<Integer, Long> pair = new Pair<>(left, right);
+        rangeChecker(pair);
+        Range<Integer> range = new Range<>(calcRange(pair));
 
+        System.out.println("left value: " + pair.getLeft());
+        System.out.println("right value: " + pair.getRight());
+        System.out.println("Range value: " + range.getRange());
     }
 
-    static Range createRange(Pair pair) {
-        Range range = new Range<Number>((Long)pair.getRight() - (Integer)pair.getLeft());
-        return range;
+    private static void rangeChecker(Pair<Integer, Long> pair) {
+        if (pair.getRight() - pair.getLeft() < 0) {
+            throw new IllegalArgumentException("Incorrect pair value, left value can`t be greater then right");
+        }
+    }
+    private static int calcRange(Pair<Integer, Long> pair) {
+        return (int) (pair.getRight() - pair.getLeft());
     }
 }
